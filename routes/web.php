@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,10 @@ Route::get('/', function () {
 Route::get('admin', function () { return view('admin'); })->middleware('checkRole:admin');
 Route::get('penjual', function () { return view('penjual'); })->middleware(['checkRole:penjual,admin']);
 Route::get('pembeli', function () { return view('pembeli'); })->middleware(['checkRole:pembeli,admin']);
+
+Route::get('/pembeli', function () {
+    return view('index');
+});
+route::resource('/admin', AdminController::class);
 Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
