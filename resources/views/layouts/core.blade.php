@@ -33,7 +33,10 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="" class="img-fluid b-logo">
+                <br>
+                <h7 class="Garnesia">Garnesia</h7>
             </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fa fa-bars"></i>

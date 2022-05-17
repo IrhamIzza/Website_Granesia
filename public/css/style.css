@@ -67,6 +67,12 @@ h6, .h6 {
   margin-bottom: 0px;
   color: #1ce057;
 }
+h7, .h7 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #5db1ad;
+}
 
 a {
   text-decoration: none;
@@ -197,10 +203,11 @@ h5.subtitle {
   box-shadow: none;
 }
 
+/* warna pada tentang kami */
 .btn-hero,
 .btn-white:hover {
   color: #fff !important;
-  background: #635CDB;
+  background: #219F94;
 }
 
 .btn-hero:focus {
@@ -405,19 +412,20 @@ h5.subtitle {
 }
 
 .navbar-expand-lg.trans-navigation .navbar-nav .nav-link {
-  color: #fff;
+  color: #219F94;
 }
 
 .trans-navigation {
   background: transparent;
 }
 
+/* warna navbar atas */
 .trans-navigation.header-white {
-  background: #111;
+  background: #fff;
 }
 
 .trans-navigation.header-white .navbar-nav .nav-link {
-  color: #fff;
+  color: #219F94;
 }
 
 .trans-navigation.header-white .navbar-nav a.active {
@@ -470,6 +478,10 @@ h5.subtitle {
 
 .dropdown-menu {
   opacity: 0;
+}
+
+.navbar-nav {
+  font-size: 20px;
 }
 
 .dropdown-menu.show {
@@ -538,7 +550,7 @@ h5.subtitle {
 
 .banner-content .subtitle {
   color: #fff;
-  background: #635CDB;
+  background: #219F94;
   display: inline-block;
   padding: 3px 8px;
   margin-bottom: 20px;
@@ -577,7 +589,7 @@ h5.subtitle {
 }
 
 .banner-3 {
-  background: url("../images/banner/banner-bg.jpg");
+  background: url("../images/banner/background.png");
   background-size: cover;
   position: relative;
 }

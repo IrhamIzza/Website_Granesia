@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin1Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +20,27 @@ use App\Http\Controllers\AdminController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
 // Route::get('admin', function () { return view('admin'); })->middleware('checkRole:admin');
-Route::get('penjual', function () { return view('penjual'); })->middleware(['checkRole:penjual,admin']);
+Route::get('penjual', function () { return view('penjual.index'); })->middleware(['checkRole:penjual,admin']);
 Route::get('pembeli', function () { return view('index'); })->middleware(['checkRole:pembeli,admin']);
 
+
 Route::group(['middleware' => ['checkRole:admin']], function(){
-    Route::resource('admin', AdminController::class);
+    Route::get('/admin', [Admin1Controller::class,'dashboard']);
+    Route::prefix('admin')->group(function () {
+        Route::get('/tables', [Admin1Controller::class,'tabel']);
+        Route::get('/billing', [Admin1Controller::class,'billing']);
+        Route::get('/profile', [Admin1Controller::class,'profile']);
     });
+    });
+
+
+ // route untuk halaman admin
+
+
 // route::resource('/admin', AdminController::class); 
 Auth::routes(['verify' => true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
