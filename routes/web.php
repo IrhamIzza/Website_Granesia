@@ -37,7 +37,7 @@ Route::group(['middleware' => ['checkRole:admin']], function(){
     });
     });
 
-
+Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
  // route untuk halaman admin
 
 

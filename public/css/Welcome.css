@@ -47,6 +47,7 @@ body{
     border-radius: 69px;
     background-color: #219F94;
     width: 100px;
+    border: none;
 }
 p{
     font-family: 'Poppins';
