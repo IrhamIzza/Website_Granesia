@@ -31,9 +31,9 @@
             <div class="row">
                 <div class="col-lg-12 col-sm-12 m-auto">
                     <div class="section-heading">
-                        <h4 class="section-title">Inspirasi Perkebunan Rumah</h4>
+                        <h3 class="section-title">Inspirasi Perkebunan Rumah</h3>
                         <div class="line"></div>
-                        <p>Layanan yang kami Berikan </p>
+                        <h5>Layanan yang kami Berikan </h5>
                     </div>
                 </div>
             </div>
@@ -41,49 +41,42 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="images/blog/blog-1.jpg" alt="" class="img-fluid">
+                        <img src="images/blog/tanaman1.png" alt="" class="img-fluid">
                         <div class="blog-text">
-                            <h6 class="author-name"><span>Tips and tricks</span>john Doe</h6>
-                            <a href="blog-single.html" class="h5 my-2 d-inline-block">
-                               Menyediakan Informasi Tanaman Hias
+                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
+                               <center>Menyediakan Informasi Tanaman Hias</center> 
                             </a>
-                            <p>If you want to grow your content quality and standard you should foolow these tips properly voluptatibus.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="images/blog/blog-2.jpg" alt="" class="img-fluid">
+                        <img src="images/blog/tanaman2.png" alt="" class="img-fluid">
                         <div class="blog-text">
-                            <h6 class="author-name"><span>Branding</span>john Doe</h6>
-                            <a href="blog-single.html" class="h5 my-2 d-inline-block">
-                                Mengajari Berbudidaya Tanaman
+                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
+                                <center>Mengajari Berbudidaya Tanaman</center> 
                             </a>
-                            <p>Brand your site at top, boost your audioance corporis facilis animi voluptas alias ex saepe quo voluptatibus.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="images/blog/blog-3.jpg" alt="" class="img-fluid">
+                        <img src="images/blog/tanaman3.png" alt="" class="img-fluid">
                         <div class="blog-text">
-                            <h6 class="author-name"><span>Marketing</span>john Doe</h6>
-                            <a href="blog-single.html" class="h5 my-2 d-inline-block">
-                                Memberitahu Media Tanaman
+                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
+                               <center>Memberitahu  Media Tanaman</center>
                             </a>
-                            <p>Becomeing a best sale marketer is not easy but not impossible too.Need to follow up some proper guidance and strategy .</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-md-4">
                     <div class="blog-block ">
-                        <img src="images/blog/blog-3.jpg" alt="" class="img-fluid">
+                        <img src="images/blog/tanaman4.png" alt="" class="img-fluid">
                         <div class="blog-text">
-                            <h6 class="author-name"><span>Marketing</span>john Doe</h6>
-                            <a href="blog-single.html" class="h5 my-2 d-inline-block">
-                                Menjual Kebutuhan Alat Kebun
+                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
+                                <center>Menjual Kebutuhan Alat Kebun</center> 
                             </a>
-                            <p>Becomeing a best sale marketer is not easy but not impossible too.Need to follow up some proper guidance and strategy .</p>
                         </div>
                     </div>
                 </div>
@@ -92,36 +85,17 @@
     </section>
     <!--  BLOG AREA END  -->
 <!--  SERVICE AREA START  -->
-<section id="about" class="bg-info">
+<section id="about" class="bg-new">
     <div class="about-bg-img d-none d-lg-block d-md-block"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-sm-12 col-md-8">
                 <div class="about-content">
-                    <h5 class="subtitle">Tentang Kami</h5>
-                    <h3>We are making beautiful <br>design layout for your business</h3>
-                    <p>We craft beautiful website layout from scratch.You need not to worry about site design and other technial issue.We provide these attractive service as a bonus.Let's have atalk together for your next project.</p>
+                    <h3>Tentang kami</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
+                        <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
+                    </p>
 
-                    <ul class="about-list">
-                        <li><i class="icofont icofont-check-circled"></i> Responsive site</li>
-
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Latest bootstrap 4
-                        </li>
-
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Modern and clean design
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Working contact form
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"> </i> Premium services and support
-                        </li>
-                        <li>
-                            <i class="icofont icofont-check-circled"></i> Cross browser compatiabilty
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

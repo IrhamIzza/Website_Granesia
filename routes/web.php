@@ -37,6 +37,9 @@ Route::group(['middleware' => ['checkRole:admin']], function(){
     });
     });
 
+    Route::get('/tanaman', function () {
+        return view('tanaman');
+    });    
 
  // route untuk halaman admin
 

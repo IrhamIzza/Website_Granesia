@@ -27,12 +27,14 @@ Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Rubik:400,600,700");
+
+/* warna pada tulisan lorem ipsum */
 body {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   font-family: "Rubik", sans-serif;
-  color: #080808;
+  color: #ffffff;
   position: relative;
 }
 
@@ -56,18 +58,53 @@ body {
   padding: 0;
 }
 
+
 h1, .h1,
 h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h4, .h4{
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 0px;
-  color: #1ce057;
+  color: #FFFFFF;
 }
+
+/* tulisan inspirasi perkebunan */
+
+h3, .h3,
 h7, .h7 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #5db1ad;
+}
+h6, .h6
+{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #5db1ad;
+  
+}
+h8, .h8 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  margin-bottom: 0px;
+  color: #000000;
+  font-size: 20px;
+}
+
+h9, .h9 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 12px;
+}
+
+
+
+/* tulisan layanan kami */
+h5, .h5{
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 0px;
@@ -151,7 +188,9 @@ h5.subtitle {
 }
 
 .section-padding {
-  padding: 90px 0px;
+  padding: 10px 0px;
+  margin-top: 50px;
+  
 }
 
 .section-heading {
@@ -311,6 +350,16 @@ h5.subtitle {
   background-color: #fff;
 }
 
+.bg-footer {
+  background-color: #ff0000;
+}
+.bg-new {
+  background-color: #219F94;
+}
+.bg-hal2 {
+  background: linear-gradient(180deg, #E8F3A4 0%, #E3EF9B 51.01%, #D3E381 100%);
+}
+
 .d-table {
   width: 100%;
 }
@@ -360,7 +409,7 @@ h5.subtitle {
 ----------------------------------*/
 .site-navigation,
 .trans-navigation {
-  padding: 20px 0px;
+  padding: 0px 0px;
 }
 
 .site-navigation .navbar-nav a,
@@ -401,7 +450,7 @@ h5.subtitle {
 
 .navbar-brand {
   padding-top: 0px;
-  margin-right: 60px;
+  margin-right: 10px;
   font-weight: 700;
   text-transform: capitalize;
   color: #fff;
@@ -415,8 +464,16 @@ h5.subtitle {
   color: #219F94;
 }
 
+.navbar-expand-lg.trans-navigation1 .navbar-nav .nav-link {
+  color: #219F94;
+}
+
 .trans-navigation {
   background: transparent;
+}
+
+.trans-navigation1 {
+  background: #fff;
 }
 
 /* warna navbar atas */
@@ -425,6 +482,9 @@ h5.subtitle {
 }
 
 .trans-navigation.header-white .navbar-nav .nav-link {
+  color: #219F94;
+}
+.trans-navigation1.header-white .navbar-nav .nav-link {
   color: #219F94;
 }
 
@@ -530,6 +590,11 @@ h5.subtitle {
   padding: 250px 0px 180px;
 }
 
+.banner-area1 .content-padding {
+  padding: 100px 0px 10px;
+}
+
+
 .content-padding {
   padding: 180px 0px 80px;
 }
@@ -547,13 +612,18 @@ h5.subtitle {
   font-weight: 700;
   line-height: 50px;
 }
+.banner-content .banner-title1 {
+  color: #219F94;
+  font-weight: 700;
+  line-height: 10px;
+}
 
 .banner-content .subtitle {
   color: #fff;
   background: #219F94;
   display: inline-block;
   padding: 3px 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -562,7 +632,7 @@ h5.subtitle {
 }
 
 .banner-content p {
-  margin: 20px 0px;
+  margin: 10px 0px;
   color: #eee;
   font-size: 18px;
   line-height: 30px;
@@ -583,8 +653,7 @@ h5.subtitle {
 }
 
 .banner-2 {
-  background: url("../images/banner/slider-3.jpg");
-  background-size: cover;
+  background: url("../images/banner/haltanaman.png");
   position: relative;
 }
 
@@ -608,7 +677,7 @@ INner Pages
 }
 
 .page-banner-area {
-  background: url("../images/banner/1.jpg") no-repeat 50% 50%;
+  background: url("../images/banner/tanaman.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -680,13 +749,25 @@ INner Pages
 
 .about-bg-img {
   position: absolute;
-  right: 0px;
+  right: 20px;
   content: "";
-  background: url("../images/banner/1.jpg") 50% 50%;
-  width: 40%;
-  height: 100%;
+  background: url("../images/banner/tanaman.png") 50% 50%;
+  width: 25%;
+  height: 93%;
   max-height: 560px;
-  top: 0px;
+  top: 20px;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+}
+
+.about2-bg-img {
+  position: absolute;
+  right: 10px;
+  content: "";
+  background: url("../images/banner/haltanaman2.png") 60% 50%;
+  width: 36%;
+  height: 93%;
+  max-height: 460px;
+  top: 10px;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -1198,7 +1279,12 @@ input[type=text], input[type=email] {
 }
 
 .blog-text {
-  padding: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.blog-text2 {
+  padding: 10px;
+  margin-left: 90px;
 }
 
 .blog-text .author-name {
@@ -1319,10 +1405,10 @@ BLOG SINGLE
  FOOTER
 ----------------------*/
 #footer {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   position: relative;
-  background: url("../images/bg/2.png");
   border-top: 1px solid #eee;
+  background-color: #747474;
 }
 
 .footer-widget ul li {
@@ -1345,8 +1431,8 @@ BLOG SINGLE
 }
 
 .footer-blog li img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   float: left;
   margin-right: 20px;
 }
@@ -1378,19 +1464,20 @@ BLOG SINGLE
 }
 
 .footer-text p span {
-  color: #000;
+  color: rgb(255, 255, 255);
 }
 
 .footer-text p.mail {
-  color: #635CDB;
+  color: #00ff0d;
 }
 
+/* warna footer tengah */
 .bg-main {
   background: #F4F8FB;
 }
 
 .footer-widget a {
-  color: rgb(12, 11, 11);
+  color: rgb(255, 255, 255);
 }
 
 /*-------------------------------
@@ -1468,6 +1555,7 @@ BLOG SINGLE
   }
   .blog-text p {
     font-size: 14px;
+    
   }
   .pricing-block {
     margin-bottom: 30px;
@@ -1539,6 +1627,10 @@ BLOG SINGLE
   .blog-block {
     margin-bottom: 30px;
   }
+  .blog-block2 {
+
+  }
+
   .blog-text {
     padding: 0px;
     margin-top: 10px;
@@ -1679,7 +1771,7 @@ BLOG SINGLE
     text-align: center;
   }
   .blog-tex h5 {
-    font-size: 15px;
+    font-size: 11px;
   }
   .blog-text p {
     font-size: 14px;
