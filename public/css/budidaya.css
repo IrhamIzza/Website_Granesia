@@ -1,0 +1,106 @@
+.farm {
+    width: 50px;
+    height: 50px;
+    left: 1443px;
+    top: 235px;
+}
+body{
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+.mystyle{
+    /* background-image: url("../images/budidaya/bg.jpg")  */
+    background: url("../images/budidaya/budidaya.png");
+    max-width: 1400px;
+    max-height: 1100px;
+    height: 800px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+.house{
+    max-height: 130px;
+    margin-left: 45%;
+    margin-top: 8%;
+}
+.garnesia {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5px;
+}
+.Dapatkan{
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+.btn_pelajari{
+    border-radius: 69px;
+    background-color: #219F94;
+    width: 15%;
+    margin-left: 43%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    margin-top: 1%;
+}
+.img1{
+    width: 10%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+.img2{
+    width: 10%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.img3{
+    width: 10%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.teknik{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 35px;
+    margin-top: 10px;
+    text-align: center;
+    color: #219F94;
+    margin-top: -10%;
+}
+.gmb_mor{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+.tls_mor{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+    color: #219F94;
+    padding-right: 5%;
+}
+.btn_more{
+    border-radius: 69px;
+    background-color: #219F94;
+    width: 10%;
+    margin-left: 85%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    margin-top: 1%;
+}

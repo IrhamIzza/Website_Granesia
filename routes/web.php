@@ -37,10 +37,14 @@ Route::group(['middleware' => ['checkRole:admin']], function(){
     });
     });
 
+<<<<<<< HEAD
     Route::get('/tanaman', function () {
         return view('tanaman');
     });    
 
+=======
+Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
+>>>>>>> 8b1506b97136757521ec5ff43f8dd10a310cf058
  // route untuk halaman admin
 
 
