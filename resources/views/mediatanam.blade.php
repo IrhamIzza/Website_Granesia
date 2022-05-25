@@ -1,34 +1,36 @@
 @extends('layouts.core2')
 
 @section('title', 'Media Tanam')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    
     <head>
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/budidaya.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/media.css') }}" >
     </head>
 @section('contents')
-</head>
 
 <body class="contianer-fluid">
     <div class="row g-0">
-        <div class="col-md-12 mystyle">
-            <div class="gambar">
-                <img class="house" src="/images/budidaya/cultivate 2.png" alt="">
-                <h1 class="garnesia">FLORIKULTUR</h1>
-                <h6 class="Dapatkan">Budidaya Tanaman Hias</h6>
-                <button class="btn_pelajari">Pelajari lebih lanjut</button>
-                <h1></h1>
-                <img class="img1" src="/images/budidaya/image 28.png" alt="">
-                <img class="img2" src="/images/budidaya/image 29.png" alt="">
-                <img class="img3" src="/images/budidaya/image 30.png" alt="">
-            </div>            
+        <div class="col-md-8 mystyle">
+            <h1 class="arang">ARANG</h1>
+            <h5 ><br> Salah satu varietas tumbuhan paling unik adalah Monstera Adansonii atau biasa dikenal juga dengan sebutan monstera topeng monyet. Adansonii merupakan tanaman merambat yang dapat tumbuh mencapai 6 meter.
+                <br><br>
+                Untuk perawatanya, hindari tumbuhan pada kondisi lingkungan berangin atau terlalu kering. Jenis ini juga tidak terlalu menyukai terpaan matahari langsung.
+                <br><br>
+                Kamu bisa menyimpan Adansonii di luar ruangan yang tertutupi kanopi. Menyemprotkan uap air juga dapat membantu daun cepat berkembang.</h5>
+            <button class="btn_cari">Cari Tahu Sekarang</button>
         </div>
-        <h6 class="teknik">Teknik Budidaya</h6>
+        <div class="col-md-2">
+            <img class="gambar" src="/images/media/raiyan-zach-p52_0Aw0Ydw-unsplash 3.png" alt="">       
+        </div>
     </div>
+    <h6 class="teknik">Jenis Media Tanaman</h6>
     <div class="row gy-5">
         <div class="col-md-6">
-            <img class="gmb_mor" src="/images/budidaya/image 27.png" alt="">
+            <img class="gmb_mor" src="/images/media/image 31.png" alt="">
         </div>
         <div class="col-md-6">
-            <h1 class="tls_mor" style="font-size : 30px">Monstera Deliciosa</h1>
+            <h1 class="tls_mor" style="font-size : 30px">Tanah</h1>
             <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
                 feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
                 habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
@@ -40,10 +42,10 @@
         </div>
 
         <div class="col-md-6">
-            <img class="gmb_mor" src="/images/budidaya/image 24.png" alt="">
+            <img class="gmb_mor" src="/images/media/image 32.png" alt="">
         </div>
         <div class="col-md-6">
-            <h1 class="tls_mor" style="font-size : 30px">Sirih Belanda</h1>
+            <h1 class="tls_mor" style="font-size : 30px">Arang</h1>
             <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
                 feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
                 habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
@@ -55,10 +57,10 @@
         </div>
 
         <div class="col-md-6">
-            <img class="gmb_mor" src="/images/budidaya/image 25.png" alt="">
+            <img class="gmb_mor" src="/images/media/image 33.png" alt="">
         </div>
         <div class="col-md-6">
-            <h1 class="tls_mor" style="font-size : 30px">Oxalis</h1>
+            <h1 class="tls_mor" style="font-size : 30px">Humus</h1>
             <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
                 feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
                 habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
@@ -70,10 +72,10 @@
         </div>
 
         <div class="col-md-6 ">
-            <img class="gmb_mor" src="/images/budidaya/image 26.png" alt="">
+            <img class="gmb_mor" src="/images/media/image 34.png" alt="">
         </div>
         <div class="col-md-6" style="padding-bottom: 4%">
-            <h1 class="tls_mor" style="font-size : 30px">Kuping Gajah</h1>
+            <h1 class="tls_mor" style="font-size : 30px">Sekam</h1>
             <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
                 feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
                 habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 

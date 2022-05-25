@@ -1,0 +1,76 @@
+.mystyle{
+    /* background-image: url("../images/budidaya/bg.jpg")  */
+    background-color: #3C3E42;
+    height: 550px;
+    max-width: auto;
+}
+body{
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+.gambar{
+    height: 550px;
+}
+.arang{
+    font-family: 'Poppins';
+    font-style: bold;
+    font-size: 50;
+    color: #EBEBEB;
+    margin-top: 10%;
+    margin-left: 13%;
+}
+h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 19px;
+    color: #EBEBEB;
+    margin-left: 13%;
+}
+.btn_cari{
+    border-radius: 69px;
+    background-color: #219F94;
+    width: 20%;
+    font-size: 15px;
+    padding: 1%;
+    margin-left: 13%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    margin-top: 2%;
+}
+.teknik{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 35px;
+    text-align: center;
+    color: #219F94;
+    margin-top: 3%;
+    padding-bottom: 5%;
+}
+
+.gmb_mor{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+.tls_mor{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify;
+    color: #219F94;
+    padding-right: 5%;
+}
+.btn_more{
+    border-radius: 69px;
+    background-color: #219F94;
+    width: 10%;
+    margin-left: 85%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    margin-top: 1%;
+    padding: 1%;
+}

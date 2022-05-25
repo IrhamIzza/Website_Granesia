@@ -35,17 +35,15 @@ Route::group(['middleware' => ['checkRole:admin']], function(){
         Route::get('/billing', [Admin1Controller::class,'billing']);
         Route::get('/profile', [Admin1Controller::class,'profile']);
     });
-    });
+});
 
-<<<<<<< HEAD
-    Route::get('/tanaman', function () {
+Route::get('/tanaman', function () {
         return view('tanaman');
     });    
 
-=======
+    
+Route::get('media', function () { return view('mediatanam'); })->middleware(['checkRole:pembeli,admin']);
 Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
->>>>>>> 8b1506b97136757521ec5ff43f8dd10a310cf058
- // route untuk halaman admin
 
 
 // route::resource('/admin', AdminController::class); 
