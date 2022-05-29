@@ -1,0 +1,84 @@
+.judul1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 35px;
+    color: #219F94;
+    margin-top: 4%;
+    padding: 3%;
+    margin-left: 3%;
+}
+.judul2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 28px;
+    color: #219F94;
+    text-align: center;
+    padding-bottom: 2%;
+    margin-top: -2%;
+}
+.contain{
+    margin-right: 6%;
+    margin-left: 6%;
+    height: auto;
+    width: auto;
+    max-width: 1250px;
+    max-height: 450px;
+    background-color: #219F9433;
+}
+.row, .gy-2{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.tulis1{
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #219F94;
+    text-align: justify;
+    font-size: 25px;
+    margin-top: 5%;
+    padding-bottom: 6%;
+    
+}
+.tulis2{
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: #000000;
+    padding-bottom: 6%;
+    
+}
+.tab {
+    display: inline-block;
+    margin-left: 58%;
+    }
+/* .tulis3{
+    font-family: 'Poppins';
+    font-size: 30px;
+    color: #000000;
+    text-align:end;
+    display: inline;
+    
+} */
+/* .btn_masuk{
+    border-radius: 69px;
+    font-style: italic;
+    background-color: #219F94;
+    margin-left: 30%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    padding: 1%;
+}
+.btn_beli{
+    border-radius: 69px;
+    font-style: italic;
+    background-color: #219F94;
+    margin-left: 70%;
+    color: #ffffff;
+    border: none;
+    height: auto;
+    padding: 1%;
+    
+} */

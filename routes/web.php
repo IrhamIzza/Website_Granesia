@@ -43,6 +43,7 @@ Route::get('/tanaman', function () {
 
     
 Route::get('media', function () { return view('mediatanam'); })->middleware(['checkRole:pembeli,admin']);
+Route::get('belanja', function () { return view('belanja'); })->middleware(['checkRole:pembeli,admin']);
 Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
 
 

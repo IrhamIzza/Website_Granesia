@@ -1,16 +1,16 @@
 @extends('layouts.core2')
-
-@section('title', 'budidaya')
+@section('budidaya', 'active')
+@section('title', 'Budidaya')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/budidaya.css') }}" >
     </head>
 @section('contents')
-</head>
 
 <body class="contianer-fluid">
     <div class="row g-0">
         <div class="col-md-12 mystyle">
-            <div class="gambar">
                 <img class="house" src="/images/budidaya/cultivate 2.png" alt="">
                 <h1 class="garnesia">FLORIKULTUR</h1>
                 <h6 class="Dapatkan">Budidaya Tanaman Hias</h6>
@@ -18,11 +18,10 @@
                 <h1></h1>
                 <img class="img1" src="/images/budidaya/image 28.png" alt="">
                 <img class="img2" src="/images/budidaya/image 29.png" alt="">
-                <img class="img3" src="/images/budidaya/image 30.png" alt="">
-            </div>            
+                <img class="img3" src="/images/budidaya/image 30.png" alt="">       
         </div>
-        <h6 class="teknik">Teknik Budidaya</h6>
     </div>
+    <h6 class="teknik">Teknik Budidaya</h6>
     <div class="row gy-5">
         <div class="col-md-6">
             <img class="gmb_mor" src="/images/budidaya/image 27.png" alt="">

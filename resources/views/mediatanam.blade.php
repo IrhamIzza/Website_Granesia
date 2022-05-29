@@ -1,6 +1,6 @@
 @extends('layouts.core2')
-
 @section('title', 'Media Tanam')
+@section('media', 'active')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     
