@@ -20,7 +20,7 @@
 
         </div>
         @endforeach
-        <form method="post" action="{{url('payment/'. $user ->id)}}">
+        <form method="post" action="{{url('orderdetail/'. $user ->id)}}">
             @csrf
         <p>nama: {{$user -> name}} </p>
         <p>alamat:<input type="text" name="address" value="{{$user -> address}}"></p>

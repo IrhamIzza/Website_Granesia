@@ -24,6 +24,7 @@ class OrderController extends Controller
         -> first();
 
         $time = date("Y-m-d H:i:s");
+        
         $total = 0;
         foreach ($cart as $key => $value) {
             $total += $value -> price * $value -> quantity;
