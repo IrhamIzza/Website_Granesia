@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin1Controller;
+use App\Http\Controllers\tanamanController;
+use App\Http\Controllers\Belanja2Controller;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,11 +42,25 @@ Route::group(['middleware' => ['checkRole:admin']], function(){
     });
 });
 
-Route::get('/tanaman', function () {
-        return view('tanaman');
-    });    
+Route::group(['middleware' => ['checkRole:pembeli,admin']], function(){
+    Route::get('/tanaman', [tanamanController::class,'tanaman']);
+    Route::prefix('tanaman')->group(function () {
+        Route::get('/kaktus', [tanamanController::class,'kaktus']);
+        Route::get('/oxalis', [tanamanController::class,'oxalis']);
+        Route::get('/tanah', [tanamanController::class,'tanah']);
+    });
+});
 
+Route::get('belanja', function () { return view('belanja'); })->middleware(['checkRole:pembeli,admin']);
     
+Route::get('belanja2', [Belanja2Controller::class,'belanja2']);
+Route::post('/tambahkeranjang/{id}', [Belanja2Controller::class,'tambahkeranjang']);
+
+Route::get('cart', [CartController::class,'cart']);
+Route::get('order', [OrderController::class,'order']);
+Route::post('/payment/{id}', [PaymentController::class,'payment']);
+
+
 Route::get('media', function () { return view('mediatanam'); })->middleware(['checkRole:pembeli,admin']);
 Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
 

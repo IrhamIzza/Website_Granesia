@@ -1,4 +1,4 @@
-@extends('layouts.core')
+@extends('layouts.coreindex')
 
 @section('title', 'Index')
 @section('contents')

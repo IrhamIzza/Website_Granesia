@@ -28,12 +28,13 @@ Version      : 1.0
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Rubik:400,600,700");
 
+
 /* warna pada tulisan lorem ipsum */
 body {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #ffffff;
   position: relative;
 }
@@ -225,12 +226,53 @@ h5.subtitle {
 .btn {
   font: 600 10.5px/1;
   display: inline-block;
-  padding: 15px 45px 15px 45px;
+  padding: 9px 10px 9px 10px;
   text-transform: uppercase;
   border: 2px solid transparent;
   transition: all .2s;
   border-radius: 0px;
   font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.btn2 {
+  font: 600 10.5px/1;
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all .2s;
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-left: 40%;
+  margin-right: 4%;
+}
+
+.btn3 {
+  font: 400 10.5px/1;
+  display: inline-block;
+  padding: 2px 4px 2px 4px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all .2s;
+  border-radius: 0px;
+  font-weight: 100;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-right: 5%;
+}
+.btn4 {
+  font: 400 10.5px/1;
+  display: inline-block;
+  padding: 2px 4px 2px 4px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  transition: all .2s;
+  border-radius: 0px;
+  font-weight: 100;
   font-size: 13px;
   letter-spacing: 1px;
 }
@@ -358,6 +400,21 @@ h5.subtitle {
 }
 .bg-hal2 {
   background: linear-gradient(180deg, #E8F3A4 0%, #E3EF9B 51.01%, #D3E381 100%);
+}
+.bg-halbelanja {
+  background: #060606;
+}
+.bg-halbelanja2{
+  background: rgba(33, 159, 148, 0.6);
+  width: 100%;
+  margin: 0px 1px 20px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.gambar{
+  padding: 10px 5px 10px 0px;
+  margin: 0px 5px 10px 0px;
+  width: 80%;
+  height: 80%;
 }
 
 .d-table {
@@ -663,6 +720,7 @@ h5.subtitle {
   position: relative;
 }
 
+
 .section-heading h2 {
   margin-bottom: 20px;
   font-weight: 400;
@@ -769,6 +827,16 @@ INner Pages
   max-height: 460px;
   top: 10px;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+}
+
+.about3-bg-img {
+  position: absolute;
+  width: 500px;
+  height: 528px;
+  left: 847.5px;
+  top: 0px;
+  
+  background: url("../images/banner/sekop.png");
 }
 
 .about-content {
@@ -1286,6 +1354,23 @@ input[type=text], input[type=email] {
   padding: 10px;
   margin-left: 90px;
 }
+.blog-text3 {
+  padding-left: 4%;
+  margin-left: 220px;
+  border-radius: 40px
+}
+.blog-text4 {
+  padding-left: 4%;
+  padding-right: 10%;
+  border-radius: 40px;
+  margin-left: 100px;
+  margin-right: 105px;
+}
+.blog-text5 {
+  padding-left: 5%;
+  margin-right: 220px;
+  border-radius: 40px
+}
 
 .blog-text .author-name {
   font-weight: 400;
@@ -1793,4 +1878,13 @@ BLOG SINGLE
   }
 }
 
+.new{
+  position: absolute;
+width: 101px;
+height: 154px;
+left: 31px;
+top: 110px;
+
+background: rgba(33, 159, 148, 0.6);
+}
 /*# sourceMappingURL=maps/style.css.map */
