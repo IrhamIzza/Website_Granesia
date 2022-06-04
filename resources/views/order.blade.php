@@ -26,7 +26,7 @@
     </div>
     @endforeach
 <!-- <div class="contain"> -->
-    <form method="post" action="{{url('payment/'. $user ->id)}}">
+    <form method="post" action="{{url('orderdetail/'. $user ->id)}}">
         @csrf
         <p class="fw-bold">{{$user -> name}} </p>
         <p class="fw-bold">Alamat: <input type="text" name="address" value="{{$user -> address}}"></p>
