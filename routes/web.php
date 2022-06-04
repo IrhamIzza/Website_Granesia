@@ -8,7 +8,7 @@ use App\Http\Controllers\tanamanController;
 use App\Http\Controllers\Belanja2Controller;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\OrderDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +58,8 @@ Route::post('/tambahkeranjang/{id}', [Belanja2Controller::class,'tambahkeranjang
 
 Route::get('cart', [CartController::class,'cart']);
 Route::get('order', [OrderController::class,'order']);
-Route::post('/payment/{id}', [PaymentController::class,'payment']);
+Route::post('/orderdetail/{id}', [OrderDetailController::class,'orderdetail']);
+
 
 
 Route::get('media', function () { return view('mediatanam'); })->middleware(['checkRole:pembeli,admin']);

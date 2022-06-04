@@ -50,6 +50,14 @@
 
         </div>
         @endforeach
+        <form method="post" action="{{url('orderdetail/'. $user ->id)}}">
+            @csrf
+        <p>nama: {{$user -> name}} </p>
+        <p>alamat:<input type="text" name="address" value="{{$user -> address}}"></p>
+        <p>nomor hp::<input type="text" name="number_telp" value="{{$user -> number_telp}}"> </p>
+        <p>tanggal: {{$time}}</p>
+        <p>total: {{$total}}</p>
+        <p>note::<input type="text" name="note"> </p>
 
         <h5 class="fw-bold" style="margin-top: 5%;">Sub Total : {{$total}}</h5>
         <div class="line" style="margin-left: 0%;"></div>

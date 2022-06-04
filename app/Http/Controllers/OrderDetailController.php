@@ -10,10 +10,10 @@ use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Order_detail;
 
-class PaymentController extends Controller
+class OrderDetailController extends Controller
 {
 
-    public function payment(Request $request)
+    public function orderdetail(Request $request)
     {
         $cart = Cart::select('item.id','item.price','item.picture','item.item_name','cart.quantity')
         ->join("item", 'item.id','=','cart.item_id')
