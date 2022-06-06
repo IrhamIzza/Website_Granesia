@@ -37,7 +37,7 @@ body{
     color: #219F94;
     margin-top: -12px;
 }
-#email,#password,#name,#telepon,#password-confirm{
+#email,#password,#name,#telepon,#password-confirm,#surname{
     background: #EBEBEB;
     border-radius: 69px;
     width: 250px;
@@ -48,6 +48,7 @@ body{
     background-color: #219F94;
     width: 100px;
     border: none;
+    color: #ffffff;
 }
 p{
     font-family: 'Poppins';

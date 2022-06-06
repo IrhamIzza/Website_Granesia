@@ -13,11 +13,8 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/category/{slug}', 'HomeController@category')->name('category');
 Route::get('/product/{slug}', 'HomeController@product')->name('product');
@@ -32,11 +29,11 @@ Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
         Route::resource("admin-orders","OrderController");
     });
 });
-
+Route::get('budidaya', function () { return view('budidaya'); });
+Route::get('media', function () { return view('mediatanam'); });
 
 Route::group(['prefix' => 'basket'], function () {
     Route::get('/', 'BasketController@index')->name('basket');
-
     Route::post('/create', 'BasketController@create')->name('basket.create');
     Route::delete('/destroy', 'BasketController@destroy')->name('basket.destroy');
     Route::patch('/update/{rowid}', 'BasketController@update')->name('basket.update');

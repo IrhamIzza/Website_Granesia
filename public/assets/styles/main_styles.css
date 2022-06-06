@@ -374,21 +374,19 @@ section
 	display: inline-block;
 	position: relative;
 	min-width: 50px;
-	border-right: solid 1px #33333b;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-right: 10px;
 	text-align: center;
 	vertical-align: middle;
-	background: #1e1e27;
+	background: #ffffff;
 }
 .language > a
 {
 	display: block;
-	color: #b5aec4;
+	color: #219F94;
 	font-weight: 400;
-	height: 50px;
-	line-height: 50px;
-	font-size: 13px;
+	/* height: 50px;
+	line-height: 50px; */
+	font-size: 17px;
 }
 .language > a > i
 {
@@ -400,6 +398,7 @@ section
 	opacity: 1;
 	top: 100%;
 }
+
 .language_selection
 {
 	display: block;
@@ -452,22 +451,20 @@ section
 
 .account
 {
-	display: inline-block;
 	position: relative;
 	min-width: 50px;
-	padding-left: 20px;
+	padding-left: 10px;
 	text-align: center;
 	vertical-align: middle;
-	background: #1e1e27;
 }
 .account > a
 {
 	display: block;
-	color: #b5aec4;
+	color: #615d5d;
 	font-weight: 400;
-	height: 50px;
-	line-height: 50px;
-	font-size: 13px;
+	/* height: 50px;
+	line-height: 50px; */
+	font-size: 17px;
 }
 .account > a > i
 {
@@ -503,6 +500,10 @@ section
 	padding-left: 10px;
 	padding-right: 10px;
 	line-height: 50px;
+}
+.account_selection b
+{
+	color: #219F94;
 }
 .account_selection li a
 {

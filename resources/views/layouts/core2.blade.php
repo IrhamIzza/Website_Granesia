@@ -11,25 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+        <link href="{{ asset('css/core.css') }}" rel="stylesheet">
+        
         <style>
-            .navbar-brand{
-            color: #219F94;
-            padding: 7px;
-            }
-            .active{
-              background:#219F94;
-              overflow:hidden;
-              padding:7px;
-              border-radius: 64px;
-              color: #ffffff;
-            }
-            a:hover{
-              background:#219F94;
-              border-radius: 64px;
-              color: #ffffff;
-            }
-            
+
         </style>
       
 </head>
@@ -45,10 +30,53 @@
     <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
     <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
     <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px;" style="padding-top: 50px;">
-      <button class="btn btn-outline-success" type="submit" style="border-radius: 20px;">Search</button>
-    </form>
+
+    <div class="">
+                <ul class="top_nav_menu">
+                    <!-- Currency / Language / My Account -->
+                    @if(Auth::guest())
+                    <li class="language">
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                            Sign In</a>
+                    </li>
+                    <li class="language">
+                        <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+                    </li>
+                    @else
+                    <li class="account">
+                        <a href="#">
+                            {{ Auth::user()->name }}
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+
+                        <ul class="account_selection">
+                            @if(Auth::user()->isItAuthorized("admin"))
+                            <li><b>ADMIN</b></li>
+                            <li><a href="{{ url('/admin-users') }}"><i class="fa fa-btn fa-users"></i>Users</a>
+                            </li>
+                            <li><a href="{{ url('/admin-category') }}"><i class="fa fa-btn fa-list-ul"></i>Category</a></li>
+                            <li><a href="{{ url('/admin-products') }}"><i class="fa fa-btn fa-cubes"></i>Products</a>
+                            </li>
+                            <li><a href="{{ url('/admin-orders') }}"><i class="fa fa-btn fa-cogs"></i>Orders</a></li>
+                            <li class="divider"></li>
+                            @endif
+
+                            @if(Auth::user())
+                            <li><b>USER</b></li>
+                            <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a>
+                            </li>
+                            <li><a href="{{ url('/orders') }}"><i class="fa fa-btn fa-list-alt"></i>Orders</a>
+                            </li>
+                            @endif
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                    @endif
+                </ul>
+            </div>
   </div>
 </nav>
 
