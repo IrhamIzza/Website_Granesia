@@ -1,15 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Admin1Controller;
-use App\Http\Controllers\tanamanController;
-use App\Http\Controllers\Belanja2Controller;
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\OrderDetailController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,52 +11,43 @@ use App\Http\Controllers\OrderDetailController;
 |
 */
 
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/category/{slug}', 'HomeController@category')->name('category');
+Route::get('/product/{slug}', 'HomeController@product')->name('product');
 
+Route::get('logout','Auth\LoginController@logout');
 
-// Route::get('admin', function () { return view('admin'); })->middleware('checkRole:admin');
-Route::get('penjual', function () { return view('penjual.index'); })->middleware(['checkRole:penjual,admin']);
-Route::get('pembeli', function () { return view('index'); })->middleware(['checkRole:pembeli,admin']);
-
-
-Route::group(['middleware' => ['checkRole:admin']], function(){
-    Route::get('/admin', [Admin1Controller::class,'dashboard']);
-    Route::prefix('admin')->group(function () {
-        Route::get('/tables', [Admin1Controller::class,'tabel']);
-        Route::get('/billing', [Admin1Controller::class,'billing']);
-        Route::get('/profile', [Admin1Controller::class,'profile']);
+Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
+    Route::group(["namespace" => "Admin"], function (){
+        Route::resource("admin-users","UsersController");
+        Route::resource("admin-category","CategoryController");
+        Route::resource("admin-products","ProductController");
+        Route::resource("admin-orders","OrderController");
     });
 });
 
-Route::group(['middleware' => ['checkRole:pembeli,admin']], function(){
-    Route::get('/tanaman', [tanamanController::class,'tanaman']);
-    Route::prefix('tanaman')->group(function () {
-        Route::get('/kaktus', [tanamanController::class,'kaktus']);
-        Route::get('/oxalis', [tanamanController::class,'oxalis']);
-        Route::get('/tanah', [tanamanController::class,'tanah']);
-    });
+
+Route::group(['prefix' => 'basket'], function () {
+    Route::get('/', 'BasketController@index')->name('basket');
+
+    Route::post('/create', 'BasketController@create')->name('basket.create');
+    Route::delete('/destroy', 'BasketController@destroy')->name('basket.destroy');
+    Route::patch('/update/{rowid}', 'BasketController@update')->name('basket.update');
 });
 
-Route::get('belanja', function () { return view('belanja'); })->middleware(['checkRole:pembeli,admin']);
-    
-Route::get('belanja2', [Belanja2Controller::class,'belanja2']);
-Route::post('/tambahkeranjang/{id}', [Belanja2Controller::class,'tambahkeranjang']);
-
-Route::get('cart', [CartController::class,'cart']);
-Route::get('order', [OrderController::class,'order']);
-Route::post('/orderdetail/{id}', [OrderDetailController::class,'orderdetail']);
+Route::get('/payment', 'PaymentController@index')->name('payment');
+Route::post('/successful', 'PaymentController@pay')->name('pay');
 
 
 
-Route::get('media', function () { return view('mediatanam'); })->middleware(['checkRole:pembeli,admin']);
-Route::get('belanja', function () { return view('belanja'); })->middleware(['checkRole:pembeli,admin']);
-Route::get('budidaya', function () { return view('budidaya'); })->middleware(['checkRole:pembeli,admin']);
+Route::get('/orders', 'OrderController@index')->name('orders');
+Route::get('/orders/{id}', 'OrderController@detail')->name('order');
 
-
-// route::resource('/admin', AdminController::class); 
-Auth::routes(['verify' => true]);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::resource('profile', 'UserDetailController')->middleware('auth');

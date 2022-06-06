@@ -1,105 +1,197 @@
-@extends('layouts.coreindex')
+@extends('layouts/main')
 
-@section('title', 'Index')
-@section('contents')
-<!--MAIN BANNER AREA START -->
-<div class="banner-area banner-3">
-    <div class="overlay dark-overlay"></div>
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
-                        <div class="banner-content content-padding">
-                            <h5 class="subtitle"></h5>
-                            <h1 class="banner-title">SELAMAT DATANG DI GARNESIA</h1>
-                            <p>Dapatkan Inspirasimu disini</p>
+@section('content')
 
-                            <a href="#" class="btn btn-white btn-circled">lets start</a>
-                        </div>
+    <!-- Slider -->
+
+
+    <div class="main_slider" style="background-image:url({{ asset('assets/images/slider_1.jpg')}})">
+        <div class="container fill_height">
+            <div class="row align-items-center fill_height">
+                <div class="col">
+                    <div class="main_slider_content">
+                        <h6>Spring / Summer Collection 2017</h6>
+                        <h1>Get up to 30% Off New Arrivals</h1>
+                        <div class="red_button shop_now_button"><a href="#">shop now</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--MAIN HEADER AREA END -->
 
-<!--  BLOG AREA START  -->
-    <section id="blog" class="section-padding bg-main">
+    <!-- New Arrivals -->
+
+    <div class="new_arrivals">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-sm-12 m-auto">
-                    <div class="section-heading">
-                        <h3 class="section-title">Inspirasi Perkebunan Rumah</h3>
-                        <div class="line"></div>
-                        <h5>Layanan yang kami Berikan </h5>
+                <div class="col text-center">
+                    <div class="section_title new_arrivals_title">
+                        <h2>New Arrivals</h2>
                     </div>
                 </div>
             </div>
-
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <div class="new_arrivals_sorting">
+                        <ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+                            <li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked"
+                                data-filter="*">all
+                            </li>
+                            @foreach($categoryMenu as $menu)
+                                <li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center"
+                                    data-filter=".{{ $menu->id }}">{{ $menu->category_name }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6 col-md-4">
-                    <div class="blog-block ">
-                        <img src="images/blog/tanaman1.png" alt="" class="img-fluid">
-                        <div class="blog-text">
-                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
-                               <center>Menyediakan Informasi Tanaman Hias</center> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-4">
-                    <div class="blog-block ">
-                        <img src="images/blog/tanaman2.png" alt="" class="img-fluid">
-                        <div class="blog-text">
-                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
-                                <center>Mengajari Berbudidaya Tanaman</center> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-4">
-                    <div class="blog-block ">
-                        <img src="images/blog/tanaman3.png" alt="" class="img-fluid">
-                        <div class="blog-text">
-                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
-                               <center>Memberitahu  Media Tanaman</center>
-                            </a>
+                <div class="col">
+                    <div class="product-grid"
+                         data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-4">
-                    <div class="blog-block ">
-                        <img src="images/blog/tanaman4.png" alt="" class="img-fluid">
-                        <div class="blog-text">
-                            <a href="blog-single.html" class="h6 my-2 d-inline-block">
-                                <center>Menjual Kebutuhan Alat Kebun</center> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--  BLOG AREA END  -->
-<!--  SERVICE AREA START  -->
-<section id="about" class="bg-new">
-    <div class="about-bg-img d-none d-lg-block d-md-block"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-sm-12 col-md-8">
-                <div class="about-content">
-                    <h3>Tentang kami</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
-                        <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
-                    </p>
+                        @foreach($products as $product)
+                            <a href="/product/{{$product->slug}}">
+                                <div class="product-item {{$product->category_id}} ">
+                                <div class="product discount product_filter">
+                                    <div class="product_image">
+                                        {!! $product->thumbs !!}
+                                    </div>
 
+                                    <div class="product_info">
+                                        <h6 class="product_name"><a
+                                                    href="/product/{{$product->slug}}">{{ $product->product_name }}</a>
+                                        </h6>
+
+                                        <div class="product_price">{{ number_format($product->product_price) }} ₺<span>{{ number_format($product->original_price ) }}
+                                                ₺</span></div>
+
+                                        <input type="number" class="quantity" id="quantity" name="quantity" value="1"
+                                               style="width: 50px; margin-right: 10px;">
+                                    </div>
+                                </div>
+                                <div class="add_to_cart_button red_button"><a
+                                            href="{{ route('basket.create', ['id' => $product->id]) }}">add to cart</a>
+                                </div>
+                            </div>
+                            </a>
+                        @endforeach
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!--  SERVICE AREA END  -->
+
+    <!-- Deal of the week -->
+
+    <div class="deal_ofthe_week">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="deal_ofthe_week_img">
+                        <img src="{{ asset('assets/images/deal_ofthe_week.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 text-right deal_ofthe_week_col">
+                    <div class="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
+                        <div class="section_title">
+                            <h2>Deal Of The Week</h2>
+                        </div>
+                        <ul class="timer">
+                            <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                                <div id="day" class="timer_num">03</div>
+                                <div class="timer_unit">Day</div>
+                            </li>
+                            <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                                <div id="hour" class="timer_num">15</div>
+                                <div class="timer_unit">Hours</div>
+                            </li>
+                            <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                                <div id="minute" class="timer_num">45</div>
+                                <div class="timer_unit">Mins</div>
+                            </li>
+                            <li class="d-inline-flex flex-column justify-content-center align-items-center">
+                                <div id="second" class="timer_num">23</div>
+                                <div class="timer_unit">Sec</div>
+                            </li>
+                        </ul>
+                        <div class="red_button deal_ofthe_week_button"><a href="#">shop now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Benefit -->
+
+    <div class="benefit">
+        <div class="container">
+            <div class="row benefit_row">
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-items-center">
+                        <div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+                        <div class="benefit_content">
+                            <h6>free shipping</h6>
+                            <p>Suffered Alteration in Some Form</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-items-center">
+                        <div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+                        <div class="benefit_content">
+                            <h6>cash on delivery</h6>
+                            <p>The Internet Tend To Repeat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-items-center">
+                        <div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
+                        <div class="benefit_content">
+                            <h6>45 days return</h6>
+                            <p>Making it Look Like Readable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 benefit_col">
+                    <div class="benefit_item d-flex flex-row align-items-center">
+                        <div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                        <div class="benefit_content">
+                            <h6>opening all week</h6>
+                            <p>8AM - 09PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@endsection
+
+
+@section('js')
+
+
+    <script>
+
+        $('.add_to_cart_button').find('a').click(function (event) {
+            event.preventDefault();
+            var quantity = $(this).parent().prev().find('input').val();
+            $.ajax({
+                type: "POST",
+                url: $(this).attr('href'),
+                data: {quantity: quantity}
+                , success: function (data) {
+                    console.log(data);
+                    $('#checkout_items').html(data.cartCount);
+                }
+            });
+            return false; //for good measure
+        });
+    </script>
+
 @endsection

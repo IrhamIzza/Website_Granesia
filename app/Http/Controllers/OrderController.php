@@ -1,36 +1,41 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Edit;
 
-use Illuminate\Http\Request;
-use App\Models\Item;
-use App\Models\Cart;
-use App\Models\User;
-use DateTime;
+use App\Category;
+use App\Order;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    public function order(){
-        $cart = Cart::select('item.price','item.picture','item.item_name','cart.quantity')
-        ->join("item", 'item.id','=','cart.item_id')
-        ->where('cart.user_id',Auth::id())
-        -> get();
+    //
 
-        $user = User::select('users.id', 'users.name', 'profile.address','profile.number_telp')
-        ->leftjoin("profile", 'users.id','=','profile.user_id')
-        ->where('users.id',Auth::id())
-        -> first();
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-        $time = date("Y-m-d H:i:s");
-        
-        $total = 0;
-        foreach ($cart as $key => $value) {
-            $total += $value -> price * $value -> quantity;
-        }
-      
-        return view('order',compact(['cart','user','time','total']));
-}
-    
+    public function index()
+    {
+        $categoryMenu = Category::orderBy('category_name','asc')->get();
+        $active = Auth::id();
+        $orders = DB::table('orders')
+            ->join('baskets', 'orders.basket_id', '=', 'baskets.id')
+            ->join('users', 'users.id', '=', 'baskets.user_id')
+            ->select('orders.id', 'orders.order_price', 'orders.status')
+            ->where('users.id', $active)
+            ->orderByDesc('id')
+            ->get();
+
+
+        return view('orders', compact('orders','categoryMenu'));
+    }
+
+    public function detail($id)
+    {
+        $categoryMenu = Category::orderBy('category_name','asc')->get();
+        $order = Order::with('baskets.basket_products.product')->where('orders.id', $id)->firstOrFail();
+        return view('order-detail', compact('order','categoryMenu'));
+    }
 }
