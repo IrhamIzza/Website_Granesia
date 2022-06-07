@@ -4,9 +4,13 @@
     font-weight: 100;
     font-size: 35px;
     color: #219F94;
-    margin-top: 3%;
+    margin-top: 5%;
     padding: 3%;
     margin-left: 3%;
+    text-decoration: none;
+}
+.judul2:hover {
+    color: #219F94;
 }
 .judul2 {
     font-family: 'Poppins';
@@ -14,7 +18,7 @@
     font-size: 28px;
     color: #219F94;
     text-align: center;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     margin-top: -2%;
 }
 .contain{
@@ -46,7 +50,6 @@
     font-family: 'Poppins';
     font-size: 30px;
     color: #000000;
-    padding-bottom: 6%;
     
 }
 .tab {
@@ -102,7 +105,13 @@
 .blog-text{
     padding: 1%;
 }
-
+.single_product_image_background{
+    margin-top: 20px;
+    margin-left: -10px;
+}
+.quantity{
+    color: #219F94;
+}
 /* .tulis3{
     font-family: 'Poppins';
     font-size: 30px;

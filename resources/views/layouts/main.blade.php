@@ -19,7 +19,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/responsive.css') }}">
     <link href="{{asset("assets/styles/toastr.min.css")}}" rel="stylesheet">
-    <link href="{{ asset('css/core.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/core.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     @yield('css')
@@ -27,19 +28,28 @@
     <nav class="navbar bg-white fixed-top">
         <div class="container-fluid">
             <b class="navbar-branda" href="#">
-                <img src="images/Capture.PNG" alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
+                <img src="images/Capture.PNG " alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
             </b>
             <a class="navbar-brand @yield('index')" href="/index">Beranda</a>
             <a class="navbar-brand @yield('tanaman')" href="/tanaman">Tanaman</a>
             <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
             <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
             <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
+            <ul class="navbar_user">
+
+                <li class="checkout">
+                    <a href="{{route('basket')}}">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span id="checkout_items" class="checkout_items">{{ Cart::count() }}</span>
+                    </a>
+                </li>
+            </ul>
             <div class="">
-                <ul class="top_nav_menu">
+                <ul class="top_nav_menu ">
                     <!-- Currency / Language / My Account -->
                     @if(Auth::guest())
                     <li class="language">
-                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in " aria-hidden="true"></i>
                             Sign In</a>
                     </li>
                     <li class="language">
@@ -75,11 +85,11 @@
                             </li>
                         </ul>
 
-
                     </li>
                     @endif
                 </ul>
             </div>
+
         </div>
 
     </nav>
@@ -105,65 +115,6 @@
     <div class="super_container">
 
         <!-- Header -->
-
-    
-
-        <div class="fs_menu_overlay"></div>
-        <div class="hamburger_menu">
-            <div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-            <div class="hamburger_menu_content text-right">
-                <ul class="menu_top_nav">
-                    <li class="menu_item"><a href="{{ route('home') }}">HOMEPAGE</a></li>
-                    @foreach($categoryMenu as $menu)
-                    <li class="menu_item"><a href="/category/{{ $menu->slug }}">{{ $menu->category_name }}</a>
-                    </li>
-                    @endforeach
-                    <li class="menu_item"><a href="{{ route('contact') }}">CONTACT</a></li>
-
-
-                    @if(Auth::guest())
-                    <li class="menu_item">
-                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
-                            Sign In</a>
-                    </li>
-                    <li class="menu_item">
-                        <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
-                    </li>
-                    @else
-                    <li class="menu_item has-children">
-                        <a href="#">
-                            {{ Auth::user()->name }} {{ Auth::user()->surname}}
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-
-                        <ul class="menu_selection">
-                            @if(Auth::user()->isItAuthorized("admin"))
-                            <li><b>ADMIN</b></li>
-                            <li><a href="{{ url('/admin-users') }}">Users</a></li>
-                            <li><a href="{{ url('/admin-category') }}">Category</a></li>
-                            <li><a href="{{ url('/admin-products') }}">Products</a>
-                            </li>
-                            <li><a href="{{ url('/admin-orders') }}">Orders</a></li>
-                            @endif
-
-                            @if(Auth::user())
-                            <li><b>USER</b></li>
-                            <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                            <li><a href="{{ url('/orders') }}"><i class="fa fa-btn fa-list-alt"></i>Orders</a></li>
-                            @endif
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
-                            </li>
-                        </ul>
-
-
-                    </li>
-                    @endif
-
-
-                </ul>
-            </div>
-        </div>
-
 
         @yield('content')
 

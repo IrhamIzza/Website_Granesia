@@ -71,7 +71,7 @@
         <div class="col-md-6 ">
             <img class="gmb_mor" src="/images/budidaya/image 26.png" alt="">
         </div>
-        <div class="col-md-6" style="padding-bottom: 4%">
+        <div class="col-md-6" >
             <h1 class="tls_mor" style="font-size : 30px">Kuping Gajah</h1>
             <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
                 feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
@@ -81,6 +81,8 @@
                 leo urna ultrices purus quis. Facilisis pellentesque pretium nunc ultricies fusce nisi, 
                 nibh. Facilisis elit nunc, enim nunc amet.</h4>
             <button class="btn_more">More</button>
+        </div>
+        <p style="padding-bottom: 2%;"></p>
         </div>
     </div>
 

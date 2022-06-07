@@ -13,7 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
         <link href="{{ asset('css/core.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-        
+        <link rel="stylesheet" href="{{asset('plugins/fontawesome/css/all.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <style>
 
         </style>
@@ -37,8 +38,7 @@
                     <!-- Currency / Language / My Account -->
                     @if(Auth::guest())
                     <li class="language">
-                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
-                            Sign In</a>
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a>
                     </li>
                     <li class="language">
                         <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
@@ -80,7 +80,17 @@
             </div>
   </div>
 </nav>
+<script>
+        window.csrfToken = "{{ csrf_token() }}"
 
+        $(document).ready(function() {
+            $(".navbar-brand").hover(function() {
+                $(this).css("background-color", "#219F94").css("border-radius", "64px").css("color", "#ffffff");
+            }, function() {
+                $(this).css("background-color", "#ffffff").css("color", "#219F94");
+            });
+        });
+    </script>
 @yield('contents')
 
 </body>

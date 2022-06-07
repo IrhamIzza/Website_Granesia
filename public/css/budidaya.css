@@ -7,7 +7,6 @@ body{
     background: url("../images/budidaya/budidaya.png");
     max-width: 1400px;
     max-height: 1100px;
-    height: 800px;
     background-size:contain;
     background-repeat: no-repeat;
     
@@ -71,7 +70,7 @@ body{
     font-size: 35px;
     text-align: center;
     color: #219F94;
-    margin-top: -10%;
+    margin-top: 10%;
     padding-bottom: 5%;
 }
 .gmb_mor{

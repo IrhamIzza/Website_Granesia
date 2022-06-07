@@ -1,13 +1,47 @@
 @extends('layouts.main')
-@section('css')
+<head>
+    
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/single_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/single_responsive.css') }}">
-@endsection
-
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/belanja.css') }}">
+</head>
 
 @section('content')
+<h2 class="judul1">Garnesia | Belanja</h2>
+@foreach($bcrumb as $bc)
+<h4 class="judul2">
+        <a  class="judul2" href="/category/{{$bc->slug}}">{{ $bc->category_name }}</a>
+    </h4>
+@endforeach
+    <div class="contain">
+        <div class="contain2">
+            <div class="row gy-2">
+                <div class="col md-6">
+                    @foreach($product->images as $image)
+                        <div class="single_product_image_background"
+                            style="background-image:url('{!! asset("uploads/thumb_".$image->name)!!}')"></div>
+                    @endforeach
+                </div>
+                <div class="col md-6">
+                    <h4 class="tulis1">{!! $product->product_detail !!}</h4>
+                    <p class="tulis2">IDR {{ number_format($product->original_price) }}
+                    <div class="product_details_title">
+                        <span style="color:#000000;">Quantity:</span>
+                        <input type="number" class="quantity" id="quantity" name="quantity" value="1"
+                               style="width: 50px; margin-right: 10px; margin-bottom:5%">
 
+                    </div>
+                    </p>
+                        <a class="navbar-brand active" style="margin-left: 20%;"  href="#">Masukan Keranjang</a>
+                        <a class="navbar-brand active" href="{{route('basket')}}">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="container single_product_container">
         <div class="row">
             <div class="col">
@@ -87,79 +121,42 @@
         </div>
 
     </div>
-
-
-
-    <!-- Benefit -->
-
-    <div class="benefit">
-        <div class="container">
-            <div class="row benefit_row">
-                <div class="col-lg-3 benefit_col">
-                    <div class="benefit_item d-flex flex-row align-items-center">
-                        <div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        <div class="benefit_content">
-                            <h6>free shipping</h6>
-                            <p>Suffered Alteration in Some Form</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 benefit_col">
-                    <div class="benefit_item d-flex flex-row align-items-center">
-                        <div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                        <div class="benefit_content">
-                            <h6>cash on delivery</h6>
-                            <p>The Internet Tend To Repeat</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 benefit_col">
-                    <div class="benefit_item d-flex flex-row align-items-center">
-                        <div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
-                        <div class="benefit_content">
-                            <h6>45 days return</h6>
-                            <p>Making it Look Like Readable</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 benefit_col">
-                    <div class="benefit_item d-flex flex-row align-items-center">
-                        <div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                        <div class="benefit_content">
-                            <h6>opening all week</h6>
-                            <p>8AM - 09PM</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 
 @section('js')
 
 
-    <script>
+            <script>
 
-        $('.red_button').find('a').click(function (event) {
-            event.preventDefault();
-            var quantity = $(this).parent().prev().find('input').val();
-            $.ajax({
-                type: "POST",
-                url: $(this).attr('href'),
-                data: {quantity: quantity}
-                , success: function (data) {
-                    console.log(data);
-                    $('#checkout_items').html(data.cartCount);
-                }
+            $('.red_button').find('a').click(function (event) {
+                event.preventDefault();
+                var quantity = $(this).parent().prev().find('input').val();
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr('href'),
+                    data: {quantity: quantity}
+                    , success: function (data) {
+                        console.log(data);
+                        $('#checkout_items').html(data.cartCount);
+                    }
+                });
+                return false; //for good measure
             });
-            return false; //for good measure
-        });
-    </script>
-
+            </script>
 
 
     <script src="{{ asset('assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js') }}"></script>
     <script src="{{ asset('assets/js/single_custom.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('assets/styles/bootstrap4/popper.js') }}"></script>
+    <script src="{{ asset('assets/styles/bootstrap4/bootstrap.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+    <script src="{{ asset('assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/Isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
+    <script src="{{ asset('assets/plugins/easing/easing.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{asset("assets/js//toastr.min.js")}}"></script>
 @endsection
