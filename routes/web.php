@@ -1,4 +1,13 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin1Controller;
+use App\Http\Controllers\tanamanController;
+use App\Http\Controllers\Belanja2Controller;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +40,7 @@ Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
 });
 Route::get('budidaya', function () { return view('budidaya'); });
 Route::get('media', function () { return view('mediatanam'); });
+Route::get('home2', function () { return view('index2'); });
 
 Route::group(['prefix' => 'basket'], function () {
     Route::get('/', 'BasketController@index')->name('basket');
@@ -38,6 +48,13 @@ Route::group(['prefix' => 'basket'], function () {
     Route::delete('/destroy', 'BasketController@destroy')->name('basket.destroy');
     Route::patch('/update/{rowid}', 'BasketController@update')->name('basket.update');
 });
+    Route::prefix('tanaman')->group(function () {
+        Route::get('/kaktus', [tanamanController::class,'kaktus']);
+        Route::get('/oxalis', [tanamanController::class,'oxalis']);
+        Route::get('/tanah', [tanamanController::class,'tanah']);
+    });
+    
+
 
 Route::get('/payment', 'PaymentController@index')->name('payment');
 Route::post('/successful', 'PaymentController@pay')->name('pay');

@@ -28,60 +28,67 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
 
+<nav class="navbar bg-white fixed-top">
+  <div class="container-fluid">
+  <b class="navbar-brand" href="#">
+      <img src="images/Capture.PNG" alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
+          </b>
+    <a class="navbar-brand @yield('index')" href="/home2">Beranda</a>
+    <a class="navbar-brand @yield('tanaman')" href="/tanaman">Tanaman</a>
+    <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
+    <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
+    <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
 
-<nav class="navbar navbar-expand-lg fixed-top trans-navigation">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="" class="img-fluid b-logo">
-                <br>
-                <h7 class="Garnesia">Garnesia</h7>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="fa fa-bars"></i>
-                </span>
-              </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                <ul class="navbar-nav ">
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="service.html">Beranda</a>
+    <div class="">
+                <ul class="top_nav_menu">
+                    <!-- Currency / Language / My Account -->
+                    @if(Auth::guest())
+                    <li class="language">
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                            Sign In</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tanaman
+                    <li class="language">
+                        <a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a>
+                    </li>
+                    @else
+                    <li class="account">
+                        <a href="#">
+                            {{ Auth::user()->name }}
+                            <i class="fa fa-angle-down"></i>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-                            <a class="dropdown-item " href="kaktus">
-                                kaktus
-                            </a>
-                            <a class="dropdown-item " href="oxalis">
-                                Budidaya Oxalis
-                            </a> 
-                            <a class="dropdown-item " href="tanah" target="blank">
-                                Tanah
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="service.html">Budidaya</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="pricing.html">Media Tanam</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="blog.html">Belanja</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link smoth-scroll" href="contact.html">Contact</a>
-                    </li>
 
+                        <ul class="account_selection">
+                            @if(Auth::user()->isItAuthorized("admin"))
+                            <li><b>ADMIN</b></li>
+                            <li><a href="{{ url('/admin-users') }}"><i class="fa fa-btn fa-users"></i>Users</a>
+                            </li>
+                            <li><a href="{{ url('/admin-category') }}"><i class="fa fa-btn fa-list-ul"></i>Category</a></li>
+                            <li><a href="{{ url('/admin-products') }}"><i class="fa fa-btn fa-cubes"></i>Products</a>
+                            </li>
+                            <li><a href="{{ url('/admin-orders') }}"><i class="fa fa-btn fa-cogs"></i>Orders</a></li>
+                            <li class="divider"></li>
+                            @endif
+
+                            @if(Auth::user())
+                            <li><b>USER</b></li>
+                            <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a>
+                            </li>
+                            <li><a href="{{ url('/orders') }}"><i class="fa fa-btn fa-list-alt"></i>Orders</a>
+                            </li>
+                            @endif
+                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                    @endif
                 </ul>
             </div>
-        </div>
-    </nav>
+  </div>
+</nav>
     <!--MAIN HEADER AREA END -->
+ 
 
 @yield('contents')
 
