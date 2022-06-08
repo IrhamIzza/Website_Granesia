@@ -25,102 +25,28 @@
                     @endforeach
                 </div>
                 <div class="col md-6">
+                    <h2>{{ $product->product_name }}</h2>
                     <h4 class="tulis1">{!! $product->product_detail !!}</h4>
                     <p class="tulis2">IDR {{ number_format($product->original_price) }}
                     <div class="product_details_title">
                         <span style="color:#000000;">Quantity:</span>
                         <input type="number" class="quantity" id="quantity" name="quantity" value="1"
-                               style="width: 50px; margin-right: 10px; margin-bottom:5%">
-
-                    </div>
-                    </p>
-                        <a class="navbar-brand active" style="margin-left: 20%;"  href="#">Masukan Keranjang</a>
-                        <a class="navbar-brand active" href="{{route('basket')}}">Beli Sekarang</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="container single_product_container">
-        <div class="row">
-            <div class="col">
-                <!-- Breadcrumbs -->
-                <div class="breadcrumbs d-flex flex-row align-items-center">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        @foreach($bcrumb as $bc)
-                            <li><a href="/category/{{$bc->slug}}"><i class="fa fa-angle-right"
-                                                                     aria-hidden="true"></i>{{ $bc->category_name }}</a>
-                            </li>
-                        @endforeach
-                        <li class="active"><a href="{{route('product', $product->slug)}}"><i class="fa fa-angle-right"
-                                                                                             aria-hidden="true"></i>{{ $product->product_name }}
-                            </a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="single_product_pics">
-                    <div class="row">
-                        <div class="col-lg-3 thumbnails_col order-lg-1 order-2">
-                            <div class="single_product_thumbnails">
-                                <ul>
-
-                                    @foreach($product->images as $image)
-                                        <li class="active">
-                                            <img src="{!! asset("uploads/thumb_".$image->name)!!}" alt=""
-                                                 data-image="{!! asset("uploads/".$image->name)!!}">
-                                        </li>
-                                    @endforeach
-
-
-                                </ul>
-                            </div>
-
-
-                        </div>
-
-                        <div class="col-lg-9 image_col order-lg-2 order-1">
-                            <div class="single_product_image">
-                                @foreach($product->images as $image)
-                                    <div class="single_product_image_background"
-                                         style="background-image:url('{!! asset("uploads/thumb_".$image->name)!!}')"></div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="product_details">
-                    <div class="product_details_title">
-                        <h2>{{ $product->product_name }}</h2>
-                        <p>{!! $product->product_detail !!}</p>
-                    </div>
-
-                    <div class="original_price">{{ number_format($product->original_price) }} ₺</div>
-                    <div class="product_price">{{ number_format($product->product_price) }} ₺</div>
-
-                    <div class="product_details_title">
-                        <span>Quantity:</span>
-                        <input type="number" class="quantity" id="quantity" name="quantity" value="1"
                                style="width: 50px; margin-right: 10px;">
 
                     </div>
 
-                    <div class="red_button" style="margin-top: 30px;">
-                        <a href="{{ route('basket.create', ['id' => $product->id]) }}">add to cart</a>
-                    </div>
+                    <div class="red_buttona" style="margin-top: 30px; position: initial;">
+                    <a class="navbar-brand active" style="margin-left: 20%;"  href="{{ route('basket.create', ['id' => $product->id]) }}">Masukan Keranjang</a>       
+                </div>
+                        <!-- <a class="navbar-brand active" style="margin-left: 20%;"  href="{{ route('basket.create', ['id' => $product->id]) }}">Masukan Keranjang</a>        -->
+                            <a style="margin-left:70%; margin-top:-8%;" class="navbar-brand active" href="{{route('basket')}}">Beli Sekarang</a>
+                        
                 </div>
             </div>
         </div>
-
     </div>
+
+
 @endsection
 
 
@@ -129,7 +55,7 @@
 
             <script>
 
-            $('.red_button').find('a').click(function (event) {
+            $('.red_buttona').find('a').click(function (event) {
                 event.preventDefault();
                 var quantity = $(this).parent().prev().find('input').val();
                 $.ajax({

@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BasketTableSeeder::class);
         $this->call(BasketProductsTableSeeder::class);
         $this->call(OrderTableSeeder::class);
+        $this->call(BudidayaaTableSeeder::class);
+        $this->call(MediaTableSeeder::class);
     }
 }

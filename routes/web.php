@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin1Controller;
 use App\Http\Controllers\tanamanController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\BudidayaController;
 use App\Http\Controllers\Belanja2Controller;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
@@ -38,8 +40,7 @@ Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
         Route::resource("admin-orders","OrderController");
     });
 });
-Route::get('budidaya', function () { return view('budidaya'); });
-Route::get('media', function () { return view('mediatanam'); });
+// Route::get('budidaya', function () { return view('budidaya'); });
 Route::get('home2', function () { return view('index2'); });
 
 Route::group(['prefix' => 'basket'], function () {
@@ -48,13 +49,29 @@ Route::group(['prefix' => 'basket'], function () {
     Route::delete('/destroy', 'BasketController@destroy')->name('basket.destroy');
     Route::patch('/update/{rowid}', 'BasketController@update')->name('basket.update');
 });
-    Route::prefix('tanaman')->group(function () {
-        Route::get('/kaktus', [tanamanController::class,'kaktus']);
-        Route::get('/oxalis', [tanamanController::class,'oxalis']);
-        Route::get('/tanah', [tanamanController::class,'tanah']);
-    });
-    
+Route::prefix('tanaman')->group(function () {
+    Route::get('/kaktus', [tanamanController::class,'kaktus']);
+    Route::get('/oxalis', [tanamanController::class,'oxalis']);
+    Route::get('/tanah', [tanamanController::class,'tanah']);
+});
 
+
+// Menampilkan  Media Tanam (Route Prefix)
+Route::get('media', [mediaController::class, 'media']);
+Route::prefix('media')->group(function () {
+    Route::get('/Tanah', [MediaController::class, 'Tanah']);
+    Route::get('/Arang', [MediaController::class, 'Arang']);
+    Route::get('/Humus', [MediaController::class, 'Humus']);
+    Route::get('/Sekam', [MediaController::class, 'Sekam']);
+});
+// Menampilkan  Media Tanam (Route Prefix)
+Route::get('budidaya', [BudidayaController::class, 'budidaya']);
+Route::prefix('budidaya')->group(function () {
+    Route::get('/Oxalis', [BudidayaController::class, 'Oxalis']);
+    Route::get('/Sirih-Belanda', [BudidayaController::class, 'Sirih']);
+    Route::get('/Monstera-Deliciosa', [BudidayaController::class, 'Monstera']);
+    Route::get('/Kuping-Gajah', [BudidayaController::class, 'Kuping']);
+});
 
 Route::get('/payment', 'PaymentController@index')->name('payment');
 Route::post('/successful', 'PaymentController@pay')->name('pay');

@@ -31,7 +31,16 @@
                 <img src="images/Capture.PNG " alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
             </b>
             <a class="navbar-brand @yield('index')" href="/index">Beranda</a>
-            <a class="navbar-brand @yield('tanaman')" href="/tanaman">Tanaman</a>
+            <li class="nav-item dropdown">
+                <a class="navbar-brand @yield('tanaman') nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tanaman
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarWelcome">
+                    <a style="margin-left: 25%;" class="navbar-brand @yield('kaktus')" href="/tanaman/kaktus">Kaktus </a>
+                    <a style="margin-left: 25%;" class="navbar-brand @yield('oxalis')" href="/tanaman/oxalis">Oxalis</a>
+                    <a style="margin-left: 25%;" class="navbar-brand @yield('tanah')" href="/tanaman/tanah">Tanah</a>
+                </div>
+            </li>
             <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
             <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
             <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
