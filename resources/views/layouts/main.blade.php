@@ -26,30 +26,31 @@
     @yield('css')
 
     <nav class="navbar bg-white fixed-top">
-        <div class="container-fluid">
-            <b class="navbar-branda" href="#">
-                <img src="images/Capture.PNG " alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
-            </b>
-            <a class="navbar-brand @yield('index')" href="/index">Beranda</a>
-            <a class="navbar-brand @yield('tanaman')" href="/tanaman">Tanaman</a>
-            <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
-            <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
-            <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
-            <ul class="navbar_user">
+  <div class="container-fluid">
+  <b class="navbar-brand" href="#">
+      <img src="images/Capture.PNG" alt="" width="80" style="margin-left:30% ;" style="padding:0 ;">
+          </b>
+    <a class="navbar-brand @yield('index')" href="/home2">Beranda</a>
+    <li class="nav-item dropdown">
+                        <a class="navbar-brand @yield('tanaman') nav-link dropdown-toggle" href="/tanaman" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tanaman
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarWelcome">
+                            <a class="navbar-brand @yield('kaktus')" href="/tanaman/kaktus">Kaktus</a>
+                            <a class="navbar-brand @yield('oxalis')" href="/tanaman/oxalis">Oxalis</a>
+                            <a class="navbar-brand @yield('tanah')" href="/tanaman/tanah">Tanah</a>
+                        </div>
+                    </li>
+    <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
+    <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
+    <a class="navbar-brand @yield('belanja')" href="/cartbelanja">Belanja</a>
 
-                <li class="checkout">
-                    <a href="{{route('basket')}}">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <span id="checkout_items" class="checkout_items">{{ Cart::count() }}</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="">
-                <ul class="top_nav_menu ">
+    <div class="">
+                <ul class="top_nav_menu">
                     <!-- Currency / Language / My Account -->
                     @if(Auth::guest())
                     <li class="language">
-                        <a href="{{ route('login') }}"><i class="fa fa-sign-in " aria-hidden="true"></i>
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
                             Sign In</a>
                     </li>
                     <li class="language">
@@ -85,14 +86,13 @@
                             </li>
                         </ul>
 
+
                     </li>
                     @endif
                 </ul>
             </div>
-
-        </div>
-
-    </nav>
+  </div>
+</nav>
 
 
     </div>
@@ -120,27 +120,7 @@
 
         <!-- Footer -->
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6"></div>
-                    <div class="col-lg-6">
-                        <div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
-                            <ul>
-                                <li><a href="http://www.facebook.com/anil.ozmen.35"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="http://www.twitter.com/Anilozmenn"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="http://www.instagram.com/anilozmen"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="http://www.github.com/anilozmen"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                                <li><a href="http://www.gitlab.com/anilozmen"><i class="fa fa-gitlab" aria-hidden="true"></i></a></li>
-                                <li><a href="@anilozmen35"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
 
     </div>
 
