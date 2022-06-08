@@ -1,5 +1,5 @@
-@extends('layouts.coretanaman')
-
+@extends('layouts.coreindex')
+@section('tanaman', 'active')
 @section('title', 'Tanah')
 @section('contents')
         <!--  BLOG AREA START  -->
@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 m-auto">
                         <div class="section-heading">
-                            <h3 class="section-title"><strong>Tanah</strong></h3>
+                            <h3 class="section-title mt-5"><strong>Tanah</strong></h3>
                             <br><br>
                             <img src="../images/banner/tanaman/tanah.png" alt="" class="img-fluid">
                             <div class="section-padding text-left">

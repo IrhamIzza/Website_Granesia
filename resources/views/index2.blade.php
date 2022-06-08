@@ -1,5 +1,5 @@
 @extends('layouts.coreindex')
-
+@section('index', 'active')
 @section('title', 'Index')
 @section('contents')
 <!--MAIN BANNER AREA START -->

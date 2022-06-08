@@ -22,7 +22,7 @@ use App\Http\Controllers\OrderDetailController;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/cartbelanja', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/category/{slug}', 'HomeController@category')->name('category');

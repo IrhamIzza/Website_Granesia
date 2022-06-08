@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         $categoryMenu = Category::orderBy('category_name','asc')->get();
         $products = Product::orderBy('id','desc')->get();
-        return view('index', compact( 'products','categoryMenu'));
+        return view('Cartbelanja', compact( 'products','categoryMenu'));
     }
 
     public function category($slug){
