@@ -42,6 +42,7 @@ Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
 });
 // Route::get('budidaya', function () { return view('budidaya'); });
 Route::get('home2', function () { return view('index2'); });
+Route::get('tanaman', function () { return view('tanaman'); });
 
 Route::group(['prefix' => 'basket'], function () {
     Route::get('/', 'BasketController@index')->name('basket');

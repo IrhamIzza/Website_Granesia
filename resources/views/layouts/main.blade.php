@@ -58,7 +58,7 @@
                     <!-- Currency / Language / My Account -->
                     @if(Auth::guest())
                     <li class="language">
-                        <a href="{{ route('login') }}"><i class="fa fa-sign-in " aria-hidden="true"></i>
+                        <a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i>
                             Sign In</a>
                     </li>
                     <li class="language">
@@ -94,14 +94,13 @@
                             </li>
                         </ul>
 
+
                     </li>
                     @endif
                 </ul>
             </div>
-
-        </div>
-
-    </nav>
+  </div>
+</nav>
 
 
     </div>
@@ -129,27 +128,7 @@
 
         <!-- Footer -->
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6"></div>
-                    <div class="col-lg-6">
-                        <div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
-                            <ul>
-                                <li><a href="http://www.facebook.com/anil.ozmen.35"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="http://www.twitter.com/Anilozmenn"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="http://www.instagram.com/anilozmen"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="http://www.github.com/anilozmen"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                                <li><a href="http://www.gitlab.com/anilozmen"><i class="fa fa-gitlab" aria-hidden="true"></i></a></li>
-                                <li><a href="@anilozmen35"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
 
     </div>
 

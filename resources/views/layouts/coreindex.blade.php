@@ -35,7 +35,7 @@
           </b>
     <a class="navbar-brand @yield('index')" href="/home2">Beranda</a>
     <li class="nav-item dropdown">
-                        <a class="navbar-brand @yield('tanaman') nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="navbar-brand @yield('tanaman') nav-link dropdown-toggle" href="/tanaman" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tanaman
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarWelcome">
@@ -46,7 +46,7 @@
                     </li>
     <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
     <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
-    <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
+    <a class="navbar-brand @yield('belanja')" href="/cartbelanja">Belanja</a>
 
     <div class="">
                 <ul class="top_nav_menu">

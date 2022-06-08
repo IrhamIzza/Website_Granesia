@@ -1,5 +1,5 @@
-@extends('layouts.coretanaman')
-
+@extends('layouts.coreindex')
+@section('tanaman', 'active')
 @section('title', 'Index')
 @section('contents')
     <!--MAIN BANNER AREA START -->

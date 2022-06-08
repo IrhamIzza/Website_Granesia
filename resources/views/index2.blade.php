@@ -91,7 +91,7 @@
         <div class="row">
             <div class="col-lg-7 col-sm-12 col-md-8">
                 <div class="about-content">
-                    <h3>Tentang kami</h3>
+                    <h3 class="text-white">Tentang kami</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
                         <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget elit ornare nunc dis tempor, pharetra dolor, scelerisque. Amet, urna parturient enim diam in ut nam sodales vel. A, interdum sed auctor est, urna. Magna nibh turpis luctus erat sit auctor eget. Nunc et id quisque at in risus rhoncus.
                     </p>
