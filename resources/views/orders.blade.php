@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="container" style="margin-top: 40px;">
+<div class="container" style="margin-top: 30px;">
 
     <div class="row">
-        <div class="col-sm-12 locations text-center">
+        <div class="col-sm-12 locations text-center text-dark">
             <h2>ORDERS</h2><br><br>
             @if (count($orders) == 0)
                 <p>You do not have an order yet</p>
@@ -20,7 +20,7 @@
                     @foreach($orders as $order)
                         <tr class="text-$order">
                             <td>PN-{{ $order->id }}</td>
-                            <td>{{ $order->order_price }} ₺</td>
+                            <td>IDR {{ $order->order_price }}</td>
                             <td>{{ $order->status }}</td>
                             <td><a href="/orders/{{$order->id}}" class="btn-sm btn-success">Detail</a></td>
                         </tr>

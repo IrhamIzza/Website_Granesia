@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12  text-dark">
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -20,7 +20,7 @@
                         <th>Category Name</th>
                         <th>slug</th>
                         <th>Created At</th>
-                        <th>#</th>
+                        <th>Action</th>
 
                     </tr>
                     </thead>

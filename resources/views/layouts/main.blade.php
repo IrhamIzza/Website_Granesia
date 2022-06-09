@@ -43,7 +43,7 @@
             </li>
             <a class="navbar-brand @yield('budidaya')" href="/budidaya">Budidaya</a>
             <a class="navbar-brand @yield('media')" href="/media">Media Tanam</a>
-            <a class="navbar-brand @yield('belanja')" href="/belanja">Belanja</a>
+            <a class="navbar-brand @yield('belanja')" href="/cartbelanja">Belanja</a>
             <ul class="navbar_user">
 
                 <li class="checkout">

@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container" style="margin-top: 40px;">
+    <div class="container" style="margin-top: 100px;">
         <div class="col-md-12">
             <div class="table-responsive">
-                <table class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered text-dark">
                     <thead class="thead-dark">
                     <tr>
                         <th>Order ID</th>
@@ -29,7 +29,7 @@
                             <td>{{ $order->baskets->user->name }} {{ $order->baskets->user->surname }}</td>
                             <td>{{ $order->phone }}</td>
                             <td>{{ $order->payment_method}}</td>
-                            <td>{{ $order->order_price}} ₺</td>
+                            <td>IDR {{ $order->order_price}}</td>
                             <td>{{ $order->status }} </td>
                             <td>{{ $order->created_at }}</td>
                             <td><a href="/admin-orders/{{$order->id}}/edit" class="btn btn-primary"><i class="fa fa-eye"></i></a></td>

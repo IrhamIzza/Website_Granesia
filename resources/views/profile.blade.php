@@ -1,9 +1,9 @@
 @extends('layouts.main')
 @section('content')
-    <div class="container product_section_container" style="padding: 30px;">
+    <div class="container product_section_container" style="padding: 80px;">
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-hover">
+                <table class="table table-hover text-dark">
                     <thead>
                     <tr>
                         <th>Name Surname</th>

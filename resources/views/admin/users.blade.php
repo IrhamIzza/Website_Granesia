@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container product_section_container" style="padding: 30px;">
+    <div class="container product_section_container" style="padding: 50px;">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 mt-5 text-dark">
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -11,7 +11,7 @@
                         <th>Name</th>
                         <th>E-Mail</th>
                         <th>Created At</th>
-                        <th>#</th>
+                        <th>Action</th>
 
                     </tr>
                     </thead>

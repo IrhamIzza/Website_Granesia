@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-dark">
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -23,7 +23,7 @@
                         <th>Product Price</th>
                         <th>Product Detail</th>
                         <th>Created At</th>
-                        <th>#</th>
+                        <th>Action</th>
 
                     </tr>
                     </thead>
@@ -34,8 +34,8 @@
                             <td>{!! $product->thumbs !!}</td>
                             <td> {{ $product->categories->category_name }}  </td>
                             <td>{{ $product->product_name }}</td>
-                            <td>{{ number_format($product->original_price) }} ₺</td>
-                            <td>{{ number_format($product->product_price) }} ₺</td>
+                            <td>IDR {{ number_format($product->original_price) }}</td>
+                            <td>IDR {{ number_format($product->product_price) }} </td>
                             <td>{!! str_limit($product->product_detail, 30) !!}</td>
                             <td>{{ $product->created_at }}</td>
                             <td>

@@ -52,7 +52,7 @@
                                                                 href="/product/{{$product->slug}}">{{ $product->product_name }}</a>
                                                     </h6>
 
-                                                    <div class="product_price">{{ number_format($product->product_price) }} ₺<span>{{ number_format($product->original_price ) }}
+                                                    <div class="product_price">{{ number_format($product->product_price) }} <span>{{ number_format($product->original_price ) }}
                                                             ₺</span></div>
 
                                                     <input type="number" class="quantity" id="quantity" name="quantity" value="1" style="width: 50px; margin-right: 10px;">

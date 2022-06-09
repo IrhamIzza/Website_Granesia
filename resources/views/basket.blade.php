@@ -16,7 +16,7 @@
                     </div><!-- Section Header /- -->
                     <div class="order-summary-content">
                         @if(count(Cart::content())>0)
-                            <table class="shop_cart">
+                            <table class="shop_cart text-dark">
                                 <thead>
                                 <tr>
                                     <th class="product-name">PRODUCT NAME</th>
@@ -44,10 +44,10 @@
                                         </td>
 
                                         <td data-title="Total" class="product-subtotal">
-                                            <span>{{$productCartItem->price}} ₺</span>
+                                            <span>IDR {{$productCartItem->price}}</span>
                                         </td>
                                         <td data-title="Total" class="product-remove">
-                                            <span>{{($productCartItem->price) * ($productCartItem->qty) }} ₺</span>
+                                            <span>IDR {{($productCartItem->price) * ($productCartItem->qty) }}</span>
                                         </td>
                                     </tr>
                                 @endforeach
