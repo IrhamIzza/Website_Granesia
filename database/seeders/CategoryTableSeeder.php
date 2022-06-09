@@ -14,8 +14,8 @@ class CategoryTableSeeder extends Seeder
     {
         //
         $categories = array(
-            array("category_name" => "Shoes", "slug" => "shoes"),
-            array("category_name" => "Bags", "slug" => "bags")
+            array("category_name" => "tanaman", "slug" => "tanaman"),
+            array("category_name" => "media tanam", "slug" => "media tanam")
         );
 
         foreach ($categories as $category)
