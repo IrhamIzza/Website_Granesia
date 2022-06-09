@@ -33,53 +33,8 @@
             <a href="/budidaya/{{$bud->slug}}" class="btn_more">More</a>
         </div>
     @endforeach 
-        <div class="col-md-6">
-            <img class="gmb_mor" src="/images/budidaya/image 24.png" alt="">
-        </div>
-        <div class="col-md-6">
-            <h1 class="tls_mor" style="font-size : 30px">Sirih Belanda</h1>
-            <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
-                feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
-                habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
-                turpis commodo. Pellentesque nulla tellus amet in sem. Pellentesque sit sollicitudin 
-                ultrices leo. Odio est, vestibulum, neque porta pharetra. Dolor velit vel, accumsan 
-                leo urna ultrices purus quis. Facilisis pellentesque pretium nunc ultricies fusce nisi, 
-                nibh. Facilisis elit nunc, enim nunc amet.</h4>
-            <button class="btn_more">More</button>
-        </div>
-
-        <div class="col-md-6">
-            <img class="gmb_mor" src="/images/budidaya/image 25.png" alt="">
-        </div>
-        <div class="col-md-6">
-            <h1 class="tls_mor" style="font-size : 30px">Oxalis</h1>
-            <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
-                feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
-                habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
-                turpis commodo. Pellentesque nulla tellus amet in sem. Pellentesque sit sollicitudin 
-                ultrices leo. Odio est, vestibulum, neque porta pharetra. Dolor velit vel, accumsan 
-                leo urna ultrices purus quis. Facilisis pellentesque pretium nunc ultricies fusce nisi, 
-                nibh. Facilisis elit nunc, enim nunc amet.</h4>
-            <button class="btn_more">More</button>
-        </div>
-
-        <div class="col-md-6 ">
-            <img class="gmb_mor" src="/images/budidaya/image 26.png" alt="">
-        </div>
-        <div class="col-md-6" >
-            <h1 class="tls_mor" style="font-size : 30px">Kuping Gajah</h1>
-            <h4 class="tls_mor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam est vel nisl, 
-                feugiat tristique quis elit risus semper. Sed orci eu dignissim sit sit lectus eget 
-                habitasse ornare. Leo, amet justo consectetur consectetur scelerisque ullamcorper nibh 
-                turpis commodo. Pellentesque nulla tellus amet in sem. Pellentesque sit sollicitudin 
-                ultrices leo. Odio est, vestibulum, neque porta pharetra. Dolor velit vel, accumsan 
-                leo urna ultrices purus quis. Facilisis pellentesque pretium nunc ultricies fusce nisi, 
-                nibh. Facilisis elit nunc, enim nunc amet.</h4>
-            <button class="btn_more">More</button>
-        </div>
-        <p style="padding-bottom: 2%;"></p>
-        </div>
     </div>
+<br><br>
 
 </body>
 
