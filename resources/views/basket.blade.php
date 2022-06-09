@@ -69,8 +69,8 @@
                             <!-- Proceed To Checkout -->
                             <div class="col-md-12 col-sm-12 text-right">
                                 <div class="wc-proceed-to-checkout">
-                                    <p>SUBTOTAL <span>{{ Cart::subtotal() }} + VAT</span></p>
-                                    <p>TOTAL <span>{{ Cart::total() }} ₺ </span></p>
+                                    <p>TOTAL <span>{{ Cart::subtotal() }}</span></p>
+                                    <!-- <p>TOTAL <span>{{ Cart::total() }} ₺ </span></p> -->
 
                                     <a href="{{route('payment')}}" class="red_button" title="CHECKOUT">CHECKOUT</a>
                                 </div>
