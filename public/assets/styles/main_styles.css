@@ -180,7 +180,7 @@ h6::selection
 }
 .form-control
 {
-	color: #db5246;
+	color: #000000;
 }
 section
 {
@@ -858,8 +858,8 @@ section
 	justify-content: center;
 	align-items: center;
 	width: auto;
-	height: 40px;
-	background: white;
+	height: 50px;
+	background: rgba(33, 159, 148, 0.6);
 	border-radius: 40px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -1082,8 +1082,8 @@ section
 	font-family: 'Poppins';
 font-style: italic;
 	line-height: 7px;
-	font-weight: 400;
-font-size: 36px;
+	font-weight: 100px;
+font-size: 20px;
 line-height: 40px;
 }
 .product_name:hover a
@@ -1186,8 +1186,9 @@ line-height: 40px;
 }
 .add_to_cart_button a
 {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 600;
+	color: white;
 }
 .product-item:hover .add_to_cart_button
 {

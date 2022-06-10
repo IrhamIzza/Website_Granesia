@@ -14,13 +14,13 @@ class ProductTableSeeder extends Seeder
     {
         //
         $products = array(
-            array("category_id" => 1 ,"slug" => "shoes-1", "product_name" => "Shoes 1", "product_detail" => "Shoes Detail", "original_price" => 150, "product_price" => 100),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
-            array("category_id" => 2, "slug" => "bags-1", "product_name" => "Bags 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+            array("category_id" => 1 ,"slug" => "tanaman-1", "product_name" => "tanaman 1", "product_detail" => "Shoes Detail", "original_price" => 150, "product_price" => 100),
+            array("category_id" => 1, "slug" => "tanaman-1", "product_name" => "tanaman 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+            array("category_id" => 1, "slug" => "tanaman-1", "product_name" => "tanaman 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+            array("category_id" => 2, "slug" => "mediatanam-1", "product_name" => "mediatanam 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+            array("category_id" => 2, "slug" => "mediatanam-1", "product_name" => "mediatanam 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+            array("category_id" => 2, "slug" => "mediatanam-1", "product_name" => "mediatanam 1", "product_detail" => "Bags Detail", "original_price" => 1250, "product_price" => 1000),
+
        );
 
         foreach ($products as $product)

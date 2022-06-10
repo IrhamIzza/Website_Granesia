@@ -670,7 +670,7 @@ h5.subtitle {
 
 
 .content-padding {
-  padding: 180px 0px 80px;
+  padding: 10px 0px 10px;
 }
 
 .banner-content {
@@ -687,9 +687,10 @@ h5.subtitle {
   line-height: 50px;
 }
 
+
 .banner-content .banner-title1 {
   color: #219F94;
-  font-weight: 700;
+  font-weight: 200;
   line-height: 10px;
 }
 
@@ -2231,4 +2232,10 @@ BLOG SINGLE
   background-color: #3C3E42;
   height: 550px;
   max-width: auto;
+}
+
+a:hover{
+  background:#219F94;
+  border-radius: 64px;
+  color: #ffffff;
 }

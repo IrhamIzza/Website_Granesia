@@ -19,17 +19,17 @@
                         <!-- Order Summary -->
                         <!-- Payment Mode -->
                         <div class="col-md-12 payment-mode">
-                            <div class="section-title">
+                            <div class="section-title text-dark">
                                 <h3>CONTACT AND INVOICE INFORMATION...</h3>
                             </div>
 
-                            <div class="section-padding"></div>
-                            <div class="container">
+                            <div class="section-padding "></div>
+                            <div class="container text-dark">
 
 
-                                <div class="row">
+                                <div class="row" >
                                     <div class="col-md-6">
-                                        <div class="form-group">
+                                        <div class="form-group ">
                                             <label for="name">Name</label>
                                             <input type="text" class="form-control" name="name" id="name"
                                                    value="{{Auth::user()->name}}" required>
@@ -97,10 +97,10 @@
 
                             </div>
                             <br><br>
-                            <div class="text-center alert alert-info">
-                                <h4>TOTAL PRICE</h4>
-                                <span class="price">{{ Cart::total() }}
-                                    <small> ₺</small></span>
+                            <div class="text-center alert alert-info text-dark">
+                                <h4 class="text-dark">TOTAL PRICE</h4>
+                                <span class="price"> IDR {{ Cart::total() }}
+                                    <small> </small></span>
                             </div>
 
 
